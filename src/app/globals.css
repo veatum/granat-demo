@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fbf0ec;
+  --color-brand-100: #f6ddd3;
+  --color-brand-200: #edbba6;
+  --color-brand-300: #e08e72;
+  --color-brand-400: #d25a42;
+  --color-brand-500: #c8322b;
+  --color-brand-600: #b02528;
+  --color-brand-700: #8e1b26;
+  --color-brand-800: #6b1220;
+  --color-brand-900: #430a14;
+
+  --color-cream-50: #fdfaf4;
+  --color-cream-100: #fbf5ec;
+  --color-cream-200: #f5e9d9;
+  --color-cream-300: #eddcc4;
+  --color-cream-400: #e0c9a8;
+
+  --color-gold-300: #ecc27a;
+  --color-gold-400: #e2b05e;
+  --color-gold-600: #b97f2e;
+
+  --color-choco-800: #3d1b1c;
+  --color-choco-900: #2b1214;
+
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-pacifico), cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream-100);
+  color: var(--color-choco-900);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+::selection {
+  background: var(--color-brand-600);
+  color: var(--color-cream-100);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
